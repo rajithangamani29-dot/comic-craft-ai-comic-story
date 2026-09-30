@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+  <h2>Create your AI comic</h2>
+  {% if error %}<div class="error">{{ error }}</div>{% endif %}
+  <form method="post" action="/generate" onsubmit="document.getElementById('loading').style.display='block'">
+    <label>Comic title</label><input name="title" required placeholder="The Robot Who Loved Rain">
+    <label>Story idea</label>
+    <textarea name="idea" rows="4" required placeholder="A lonely robot in a desert city discovers rain for the first time..."></textarea>
+    <div class="grid">
+      <div><label>Genre</label>
+        <select name="genre"><option>Adventure</option><option>Comedy</option><option>Sci-Fi</option><option>Fantasy</option><option>Mystery</option></select></div>
+      <div><label>Art style</label>
+        <select name="style"><option>colorful cartoon</option><option>manga black and white</option><option>watercolor storybook</option><option>retro superhero comic</option></select></div>
+    </div>
+    <div class="grid">
+      <div><label>Characters (optional)</label><input name="characters" placeholder="Robo, a curious girl named Mia"></div>
+      <div><label>Number of panels (2-8)</label><input type="number" name="panels" value="4" min="2" max="8"></div>
+    </div>
+    <button type="submit">Generate Comic</button>
+    <div id="loading">⏳ Generating outline, story and panels... this can take a while.</div>
+  </form>
+</div>
+{% endblock %}

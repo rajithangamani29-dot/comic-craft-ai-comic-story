@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ comic.title }} - Preview{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>{{ comic.title }}</h2>
+  {% if comic.used_placeholder %}
+  <div class="note">Placeholder panels were used (Stable Diffusion is off or not installed). Set <code>USE_PLACEHOLDER=0</code> and install <code>requirements-diffusers.txt</code> for real AI images.</div>
+  {% endif %}
+  {% for p in comic.pages %}
+    <img class="page-img" src="/static/generated/{{ comic.id }}/{{ p }}" alt="Comic page">
+  {% endfor %}
+</div>
+<div class="card">
+  <h3>📖 Story</h3>
+  <div class="narration">{{ comic.narration }}</div>
+</div>
+<form method="post" action="/export/{{ comic.id }}"><button type="submit">Export as PDF</button></form>
+{% endblock %}

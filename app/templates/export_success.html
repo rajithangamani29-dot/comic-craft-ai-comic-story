@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Export Successful{% endblock %}
+{% block content %}
+<div class="card">
+  <h2>✅ Your comic is ready!</h2>
+  <p><b>{{ comic.title }}</b> has been exported as a PDF.</p>
+  <a class="btn" href="/download/{{ comic.id }}">Download PDF</a>
+  <a class="btn" style="background:#6b7280" href="/comic/{{ comic.id }}">Back to preview</a>
+  <a class="btn" style="background:#6b7280" href="/">Create another</a>
+</div>
+{% endblock %}

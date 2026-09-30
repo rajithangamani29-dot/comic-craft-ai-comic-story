@@ -1,0 +1,18 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,Segoe UI,Arial,sans-serif;margin:0;background:#fff7ed;color:#1f2937}
+header{background:linear-gradient(90deg,#f97316,#ef4444);color:#fff;padding:18px 24px}
+header h1{display:inline;font-size:1.5rem}
+header a{color:#fff;text-decoration:none;margin-left:16px}
+main{max-width:900px;margin:28px auto;padding:0 16px}
+.card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.08);margin-bottom:20px}
+label{display:block;margin:12px 0 4px;font-weight:600}
+input,select,textarea{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;font-size:1rem}
+button,.btn{display:inline-block;background:#ea580c;color:#fff;border:0;padding:11px 20px;border-radius:8px;font-size:1rem;cursor:pointer;margin-top:16px;text-decoration:none}
+button:hover,.btn:hover{background:#c2410c}
+.error{background:#fee2e2;color:#991b1b;padding:10px;border-radius:8px;margin-bottom:12px}
+.note{background:#fef9c3;color:#854d0e;padding:10px;border-radius:8px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.page-img{width:100%;border:2px solid #111;border-radius:6px;margin-bottom:16px}
+.narration{white-space:pre-wrap;line-height:1.6}
+#loading{display:none;margin-top:12px;font-weight:600}

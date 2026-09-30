@@ -1,0 +1,7 @@
+# Needed only for real Stable Diffusion image generation (panel-wise images)
+# For NVIDIA GPU install the CUDA build of torch from https://pytorch.org first.
+torch
+diffusers
+transformers
+accelerate
+safetensors
